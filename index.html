@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Aqi!</title>
+    <style>
+        /* Global Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffe0e9, #fff5f7);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff007f;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeInText 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeInGallery 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeInGallery {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: scale(0.8) translateY(30px);
+            animation: slideIn 0.8s ease-in-out forwards;
+        }
+
+        .gallery-item:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        .gallery-item:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Message Section */
+        .message {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInMessage 1.5s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeInMessage {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message p {
+            font-size: 1.5rem;
+            color: #555;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .message p span {
+            color: #ff007f;
+            font-size: 1.7rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+            opacity: 0;
+            animation: fadeInFooter 2s ease-in-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fadeInFooter {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .message p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Aqi! 🎂✨</h1>
+
+    <div class="gallery">
+        <div class="gallery-item"><img src="img/1.jpg" alt="Aqi's Photo 1"></div>
+        <div class="gallery-item"><img src="img/2.jpg" alt="Aqi's Photo 2"></div>
+        <div class="gallery-item"><img src="img/3.jpg" alt="Aqi's Photo 3"></div>
+        <div class="gallery-item"><img src="img/4.jpg" alt="Aqi's Photo 4"></div>
+        <div class="gallery-item"><img src="img/5.jpg" alt="Aqi's Photo 5"></div>
+        <div class="gallery-item"><img src="img/6.jpg" alt="Aqi's Photo 6"></div>
+        <div class="gallery-item"><img src="img/7.jpg" alt="Aqi's Photo 7"></div>
+        <div class="gallery-item"><img src="img/8.jpg" alt="Aqi's Photo 8"></div>
+        <div class="gallery-item"><img src="img/9.jpg" alt="Aqi's Photo 9"></div>
+        <div class="gallery-item"><img src="img/10.jpg" alt="Aqi's Photo 10"></div>
+    </div>
+
+    <div class="message">
+        <p>🌟 <span>Happy Birthday</span>, Aqi! 🎉</p>
+        <p>May your day be as beautiful and special as you are! 💖</p>
+        <p>Wishing you endless joy, love, and laughter today and always. 🥳✨</p>
+        <p>You deserve all the happiness in the world! 🎂</p>
+        
+    </div>
+
+    <div class="footer">
+        Made with 💖 for Aqi's special day!
+    </div>
+</body>
+</html>
